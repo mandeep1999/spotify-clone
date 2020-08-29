@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import '../css/Sidebar.css';
 import SidebarOption from '../components/SidebarOption';
 import HomeIcon from '@material-ui/icons/Home';
 import SearchIcon from '@material-ui/icons/Search';
 import LibraryMusicIcon from '@material-ui/icons/LibraryMusic';
-import { useDataLayerValue } from '../context/DataLayer';
+import SpotifyContext from '../context/spotify/SpotifyContext';
 
 const Sidebar = () => {
-  const [{ playlists }, dispatch] = useDataLayerValue();
+  const spotifyContext = useContext(SpotifyContext);
+  const { playlists } = spotifyContext;
   return (
     <div className="sidebar">
       <img

@@ -4,7 +4,7 @@ import Sidebar from '../components/Sidebar';
 import Body from '../components/Body';
 import Footer from '../components/Footer';
 
-const Player = ({ spotify }) => {
+const Player = () => {
   return (
     <div className="player">
       <div className="player_body">
